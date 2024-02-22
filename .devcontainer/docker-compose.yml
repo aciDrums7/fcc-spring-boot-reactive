@@ -1,7 +1,7 @@
 version: '3.8'
 
 # volumes:
-  # postgres-data:
+# postgres-data:
 
 services:
   app:
@@ -10,11 +10,11 @@ services:
       context: .
       dockerfile: Dockerfile
     # environment:
-      # NOTE: POSTGRES_DB/USER/PASSWORD should match values in db container
-      # POSTGRES_PASSWORD: postgres
-      # POSTGRES_USER: postgres
-      # POSTGRES_DB: postgres
-      # POSTGRES_HOSTNAME: postgresdb
+    # NOTE: POSTGRES_DB/USER/PASSWORD should match values in db container
+    # POSTGRES_PASSWORD: postgres
+    # POSTGRES_USER: postgres
+    # POSTGRES_DB: postgres
+    # POSTGRES_HOSTNAME: postgresdb
 
     volumes:
       - ../..:/workspaces:cached
@@ -42,5 +42,5 @@ services:
   #     POSTGRES_USER: postgres
   #     POSTGRES_DB: postgres
 
-    # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+  # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
+  # (Adding the "ports" property to this file will not forward from a Codespace.)
