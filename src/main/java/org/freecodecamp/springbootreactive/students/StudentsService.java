@@ -2,7 +2,6 @@ package org.freecodecamp.springbootreactive.students;
 
 import java.time.Duration;
 import lombok.RequiredArgsConstructor;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -21,10 +20,10 @@ public class StudentsService {
     }
 
     public Mono<StudentResponseDto> findById(Long id) {
-        return repository.findById(id).map(mapper::toDto);
+        return repository.findById(id).map(mapper::toDto).delayElement(Duration.ofSeconds(3));
     }
 
     public Mono<StudentResponseDto> save(StudentRequestDto student) {
-        return repository.save(mapper.toEntity(student)).map(mapper::toDto);
+        return repository.save(mapper.toEntity(student)).map(mapper::toDto).delayElement(Duration.ofSeconds(3));
     }
 }
