@@ -17,7 +17,7 @@ public class SpringbootReactiveApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentsService service) {
         return args -> {
-            for (int i = 1; i < 100; i++) {
+            for (int i = 1; i < 3; i++) {
                 service
                     .save(StudentRequestDto.builder().firstname("Name " + i).lastname("Surname " + i).age(i).build())
                     //! needed to execute the op and not just queue it, like the observables in RxJs
