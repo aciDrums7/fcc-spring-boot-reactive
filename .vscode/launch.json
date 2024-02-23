@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot Reactive",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "org.freecodecamp.springbootreactive.SpringbootReactiveApplication",
+      "projectName": "springboot-reactive",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

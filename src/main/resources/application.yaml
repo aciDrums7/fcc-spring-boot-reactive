@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://postgres-reactive:5432/postgres
+    username: postgres
+    password: postgres
+  flyway:
+    # need to specify jdbc instead of r2dbc
+    url: jdbc:postgresql://postgres-reactive:5432/postgres
+    user: postgres
+    password: postgres
+    enabled: true
